@@ -77,7 +77,7 @@ function Modal() {
 				onClose={setOpen}
 				className='fixed z-10 inset-0 overflow-y-auto'
 			>
-				<div className='flex items-end justify-center min-h-[800px] sm:min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0'>
+				<div className='flex items-center  justify-center min-h-[800px] sm:min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0'>
 					<Transition.Child
 						as={Fragment}
 						enter='ease-out duration-300'
@@ -107,7 +107,7 @@ function Modal() {
 						leaveFrom='opacity-100 translate-y-0 sm:scale-100'
 						leaveTo='opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95'
 					>
-						<div className='inline-block align-bottom bg-white rounded-lg px-4 pt-5 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6 w-[80%] pb-4 -mt-24 '>
+						<div className='inline-block align-bottom bg-white rounded-lg px-4 pt-5 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6 w-[100%] pb-4 -mt-24 '>
 							<div>
 								<div>
 									{selectedFile ? (
