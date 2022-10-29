@@ -107,7 +107,10 @@ function Header() {
 				<div className='text-black flex flex-col  justify-start ml-5 mt-8 space-y-4'>
 					{session ? (
 						<>
-							<div onClick={signOut} className='flex space-x-2 items-center '>
+							<div onClick={()=> {
+                                signOut()
+                                setIsOpen(false)
+                            }} className='flex space-x-2 items-center '>
 								<img
 									src={session.user.image}
 									className='rounded-ful w-10 h-10 rounded-full flex-shrink-0 cursor-pointer'
@@ -115,14 +118,19 @@ function Header() {
 								<p> {session.user.username} </p>
 							</div>
 							<div
-								onClick={() => setOpen(true)}
+								onClick={() => {
+                                    setOpen(true); setIsOpen(false)
+                                }}
 								className='flex space-x-2 items-center'
 							>
 								<PlusCircleIcon className='navBtn !block' />
 								<p>Upload</p>
 							</div>
 
-							<div onClick={signOut} className='flex space-x-2 items-center'>
+							<div onClick={() => {
+                                setIsOpen(false);
+                                signOut()
+                            }} className='flex space-x-2 items-center'>
 								<ArrowSmLeftIcon className='navBtn !block' />
 								Sign Out
 							</div>
@@ -133,6 +141,7 @@ function Header() {
 								className='flex space-x-2 items-center'
 								onClick={() => {
 									router.push("/");
+                                    setIsOpen(false)
 								}}
 							>
 								<HomeIcon className='navBtn !block' />
@@ -140,7 +149,10 @@ function Header() {
 								<p>Home</p>
 							</div>
 
-							<div onClick={signIn} className='flex space-x-2 items-center'>
+							<div onClick={()=> {
+                                signIn()
+                                setIsOpen(false)
+                            }} className='flex space-x-2 items-center'>
 								<ArrowSmRightIcon className='navBtn !block' />
 								Sign In
 							</div>
