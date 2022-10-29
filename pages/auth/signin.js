@@ -12,6 +12,9 @@ function signIn({ providers }) {
                 <p className="font-xs italic">
                     This is not a REAL APP it's just a personal project built by Ezomon Glory with the help of <a target="_blank" className="underline" href="https://www.instagram.com/ssssangha/">sonny sangha</a>
                 </p>
+                <p className="fond-bold">
+                    Only the signIn, signOut, likes, Upload and comment functionalities was implemented
+                </p>
 				<div className="mt-40">
 					{Object.values(providers).map((provider) => (
 						<div key={provider.name} className=''>
